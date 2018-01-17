@@ -25,6 +25,11 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 call vundle#end()
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+"Credit joshdick
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
 if (empty($TMUX))
   if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -37,12 +42,24 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-set background=dark
+"set background=dark " for the dark version
+" set background=light " for the light version
+"colorscheme one
+"colorscheme one
+"set background=dark
 colorscheme one
+"set background=dark
 syntax enable
-set t_Co=256
 set laststatus=2
 let g:airline_theme='one'
 let g:airline#extensions#tabline#enabled = 1
 let g:one_allow_italics=1
 autocmd vimenter * NERDTree
+let NERDTreeShowHidden=1
+if exists('$TMUX')
+"    set t_8b=^[[48;2;%lu;%lu;%lum
+"    set t_8f=^[[38;2;%lu;%lu;%lum
+"    set t_Co=256 " For tmux
+"    set t_ut=
+    set background=dark
+endif
