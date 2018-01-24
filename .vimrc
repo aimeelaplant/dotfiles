@@ -19,7 +19,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'shougo/neocomplete.vim'
 Plugin 'rakr/vim-one'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'tpope/vim-surround'
@@ -56,10 +55,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:one_allow_italics=1
 autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
-if exists('$TMUX')
-"    set t_8b=^[[48;2;%lu;%lu;%lum
-"    set t_8f=^[[38;2;%lu;%lu;%lum
-"    set t_Co=256 " For tmux
-"    set t_ut=
-    set background=dark
+if exists($TMUX)
+    set t_8b=^[[48;2;%lu;%lu;%lum
+    set t_8f=^[[38;2;%lu;%lu;%lum
 endif

@@ -63,7 +63,7 @@ source ~/.bashrc
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
+export TERM=xterm-256color 
 # Preferred editor for local and remote sessions
 #if [[ -n $SSH_CONNECTION ]]; then
 #    export EDITOR='vim'
