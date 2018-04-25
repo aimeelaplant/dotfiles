@@ -1,3 +1,4 @@
+# Exa plugin used: https://the.exa.website/
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -97,3 +98,4 @@ if [ -f '/Users/aimeelaplant/Downloads/google-cloud-sdk/completion.zsh.inc' ]; t
 
 # added by travis gem
 [ -f /Users/aimeelaplant/.travis/travis.sh ] && source /Users/aimeelaplant/.travis/travis.sh
+export PATH="/usr/local/opt/python@2/bin:$PATH"
