@@ -8,7 +8,7 @@ sed "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"spaceshipp\"/g" ~/.zshrc
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install python zsh-syntax-highlighting zsh-autosuggestions tmux exa go docker-compose goreleaser/tap/goreleaser
+brew install python zsh-syntax-highlighting tmux exa go docker-compose goreleaser/tap/goreleaser
 
 brew tap homebrew/caskfonts
 # Switch iTerm font to Fira.
@@ -20,7 +20,7 @@ git clone https://github.com/powerline/fonts.git --depth=1
 
 ./fonts/install.sh
 
-echo "source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\nsource /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh\nexport SAVEHIST=5000\n" >> ~/.zshrc
+echo "source $(brew --prefix zsh-syntax-highlighting)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\nexport SAVEHIST=5000\n" >> ~/.zshrc
 
 git clone https://github.com/joshdick/onedark.vim.git
 
